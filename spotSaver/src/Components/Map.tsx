@@ -1,5 +1,3 @@
-/// app.js
-import React, { useEffect, useRef, useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import DeckGL from "@deck.gl/react/typed";
 import { Map as Mapper } from "react-map-gl";
