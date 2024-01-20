@@ -25,8 +25,15 @@ function Map() {
       controller={true}
     >
         <Mapper mapboxAccessToken={mapSettings.accessToken} mapStyle={mapSettings.style}/>
-        <Button>Find a spot</Button>
-        <Button>Reserve Spot</Button>
+        <Button className="fixed top-5 left-5 flex items-center">
+          <img 
+            src="/search_no_bg.png"
+            className="mr-2 w-6 h-6 filter hue-rotate-360"
+            alt="Search Icon"
+          />
+          Find a spot
+        </Button>
+        <Button className="fixed bottom-16 right-5">Reserve Spot</Button>
       </DeckGL>
     </div>
   );
