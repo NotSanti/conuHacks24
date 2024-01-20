@@ -1,11 +1,11 @@
-import Header from "../src/header"
-import Footer from "../src/footer"
+import Header from "../src/Header.tsx"
+import Footer from "../src/Footer.tsx"
 import './App.css'
 
 function App() {
   return (
     <>
-      <Header />
+      <Header/>
       <Footer/>
     </>
   )

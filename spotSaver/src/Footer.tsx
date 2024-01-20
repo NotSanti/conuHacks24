@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import './Footer.css'
 
 class Footer extends Component {
   render() {
     return (
-      <footer>
-        <p>&copy; {new Date().getFullYear()} Spot Saver</p>
+      <footer className="footer">
+        <p>&copy; Spot Saver {new Date().getFullYear()} </p>
       </footer>
     );
   }
