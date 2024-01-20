@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 .gradient-bg {
-  background: linear-gradient(to right, #f56565, #ecc94b);
+  background: linear-gradient(to right, #ff3131, #ff914d);
   color: white; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
