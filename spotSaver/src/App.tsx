@@ -1,13 +1,11 @@
-import Header from "../src/Header.tsx"
-import Footer from "../src/Footer.tsx"
+import Footer from "./Components/Footer.tsx"
 import './App.css'
-import {Map} from './Components'
+import {Map} from './Components/index.ts'
 
 
 function App() {
   return (
     <>
-      <Header/>
       <Map/>
       <Footer/>
     </>

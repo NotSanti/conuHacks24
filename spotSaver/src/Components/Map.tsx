@@ -1,5 +1,6 @@
 import "mapbox-gl/dist/mapbox-gl.css";
 import DeckGL from "@deck.gl/react/typed";
+import Button from "./Button.tsx"
 import { Map as Mapper } from "react-map-gl";
 
 const INITIAL_VIEW_STATE = {
@@ -24,6 +25,8 @@ function Map() {
       controller={true}
     >
         <Mapper mapboxAccessToken={mapSettings.accessToken} mapStyle={mapSettings.style}/>
+        <Button>Find a spot</Button>
+        <Button>Reserve Spot</Button>
       </DeckGL>
     </div>
   );
