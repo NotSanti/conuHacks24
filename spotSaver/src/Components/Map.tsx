@@ -1,5 +1,6 @@
 import "mapbox-gl/dist/mapbox-gl.css";
 import DeckGL from "@deck.gl/react/typed";
+import Button from "./Button.tsx"
 import { Map as Mapper } from "react-map-gl";
 import { HeatmapLayer } from "@deck.gl/aggregation-layers";
 import * as parkingDataJson from '../data/parkingData.json';
@@ -48,8 +49,6 @@ function Map() {
       info.color = [255, 255, 255];
       console.log('Hovered:', info, event)},
     onClick: (info: any, event: any) => console.log('Clicked:', info, event),
-    // iconAtlas and iconMapping are required
-    // getIcon: return a string
     iconAtlas: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/icon-atlas.png',
     iconMapping: ICON_MAPPING,
     getIcon: () => 'marker',
@@ -57,7 +56,7 @@ function Map() {
     sizeScale: 5,
     getPosition: (d: { coordinates: number; }) => d.coordinates,
     getSize: () => 5,
-    getColor: (d: { exits: number; }) => [Math.sqrt(d.exits), 140, 0],
+    getColor: (d: { exits: number; }) => [255, 49, 49],
     updateTriggers: {
       getFillColor: [selectedMarker]
     },
@@ -82,8 +81,19 @@ function Map() {
       }
       }
     >
-        <Mapper mapboxAccessToken={mapSettings.accessToken} mapStyle={mapSettings.style}>
-        </Mapper>
+        <Mapper mapboxAccessToken={mapSettings.accessToken} mapStyle={mapSettings.style}/>
+        <Button 
+        hoverClassName="bg-white text-black"
+        className="fixed top-5 left-5 flex items-center bg-[#ff3131] "
+        imageSrc={true}>
+          Find a spot
+        </Button>
+        <Button 
+        hoverClassName="bg-[#f46666]"
+        className="fixed bottom-16 right-5 bg-[#ff3131]"
+        imageSrc={false}>
+          Reserve Spot
+        </Button>
       </DeckGL>
     </div>
   );
