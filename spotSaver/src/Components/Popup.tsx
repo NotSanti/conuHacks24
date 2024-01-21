@@ -15,6 +15,9 @@ class Popup extends Component<PopupProps> {
     return (
       <>
         <div className="popup-container">
+        <button className="close-button" onClick={this.props.onClose}>
+            &times;
+          </button>
           <h2 className="fixed text-center text-lg font-bold">Parking Spot</h2>
           <br></br>
           <div className="flex items-center">
