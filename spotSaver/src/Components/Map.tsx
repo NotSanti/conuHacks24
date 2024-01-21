@@ -64,6 +64,8 @@ function Map() {
 
   console.log(import.meta.env.MAPBOX_KEY);
 
+
+
   const mapSettings = {
     accessToken: import.meta.env.VITE_MAPBOX_ACESS_TOKEN,
     style: "mapbox://styles/mapbox/standard",
