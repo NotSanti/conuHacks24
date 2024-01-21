@@ -21,6 +21,10 @@ class Button extends Component<ButtonProps, ButtonState> {
     };
   }
 
+  handleClick = () => {
+   console.log();
+  }
+
   handleMouseEnter = (event: MouseEvent<HTMLButtonElement>) => {
     this.setState({ isHovered: true });
     if (this.props.onMouseEnter) {
@@ -46,7 +50,8 @@ class Button extends Component<ButtonProps, ButtonState> {
       <button
         className={`custom-button ${isHovered ? hoverClassName : ''} font-bold py-2 px-4 rounded ${className}`}
         onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseLeave}>
+        onMouseLeave={this.handleMouseLeave}
+        onClick={this.handleClick}>
         {imageSrc ? (
           <img
             src={buttonImgSrc}
