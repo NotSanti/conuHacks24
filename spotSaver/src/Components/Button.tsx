@@ -40,6 +40,7 @@ class Button extends Component<ButtonProps, ButtonState> {
     const { isHovered } = this.state;
 
     const buttonImgSrc = imageSrc ? (isHovered ? '/search_no_bg.png' : '/search_no_bg_white.png') : '';
+    const buttonText = imageSrc ? (isHovered ? 'Search' : children) : children;
 
     return (
       <button
@@ -53,7 +54,7 @@ class Button extends Component<ButtonProps, ButtonState> {
             alt="Search Icon"
           />
           ) : null}
-        {children}
+        {buttonText}
       </button>
     );
   }
