@@ -7,6 +7,7 @@ interface ButtonProps {
   onMouseEnter?: (event: MouseEvent<HTMLButtonElement>) => void;
   onMouseLeave?: (event: MouseEvent<HTMLButtonElement>) => void;
   imageSrc?: boolean;
+  onClick?: () => void;
 }
 
 interface ButtonState {
@@ -19,6 +20,12 @@ class Button extends Component<ButtonProps, ButtonState> {
     this.state = {
       isHovered: false,
     };
+  }
+
+  handleClick = () => {
+    if (this.props.onClick) {
+      this.props.onClick(); 
+    }
   }
 
   handleMouseEnter = (event: MouseEvent<HTMLButtonElement>) => {
@@ -46,7 +53,8 @@ class Button extends Component<ButtonProps, ButtonState> {
       <button
         className={`custom-button ${isHovered ? hoverClassName : ''} font-bold py-2 px-4 rounded ${className}`}
         onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseLeave}>
+        onMouseLeave={this.handleMouseLeave}
+        onClick={this.handleClick}>
         {imageSrc ? (
           <img
             src={buttonImgSrc}
