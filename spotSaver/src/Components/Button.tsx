@@ -7,6 +7,7 @@ interface ButtonProps {
   onMouseEnter?: (event: MouseEvent<HTMLButtonElement>) => void;
   onMouseLeave?: (event: MouseEvent<HTMLButtonElement>) => void;
   imageSrc?: boolean;
+  onClick?: () => void;
 }
 
 interface ButtonState {
@@ -22,7 +23,9 @@ class Button extends Component<ButtonProps, ButtonState> {
   }
 
   handleClick = () => {
-   console.log();
+    if (this.props.onClick) {
+      this.props.onClick(); 
+    }
   }
 
   handleMouseEnter = (event: MouseEvent<HTMLButtonElement>) => {

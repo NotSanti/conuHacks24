@@ -6,35 +6,40 @@ import { FaCarSide } from "react-icons/fa6";
 import { CiCreditCard1 } from "react-icons/ci";
 import { TbRoad } from "react-icons/tb";
 
-class Popup extends Component {
+interface PopupProps {
+  onClose: () => void;
+}
+
+class Popup extends Component<PopupProps> {
   render() {
     return (
       <>
-        <div className="bg-white text-black">
-          <h2>Parking Spot</h2>
-          <div>
-            <FaCarSide/>
-            <p>Parking Number</p>
+        <div className="popup-container">
+          <h2 className="fixed text-center text-lg font-bold">Parking Spot</h2>
+          <br></br>
+          <div className="flex items-center">
+            <FaCarSide className="mr-2"/>
+            <p className="mb-0">Parking Number</p>
           </div>
-          <div>
-            <TbRoad />
-            <p>Parking Genre</p>
+          <div className="flex items-center">
+            <TbRoad className="mr-2"/>
+            <p className="mb-0">Parking Genre</p>
           </div>
-          <div>
-            <LuParkingCircle/>
-            <p>Parking Type</p>
+          <div className="flex items-center">
+            <LuParkingCircle className="mr-2"/>
+            <p className="mb-0">Parking Type</p>
           </div>
-          <div>
-            <SiOpenstreetmap/>
-            <p>Street Name</p>
+          <div className="flex items-center">
+            <SiOpenstreetmap className="mr-2"/>
+            <p className="mb-0">Street Name</p>
           </div>
-          <div>
-            <CiCreditCard1/>
-            <p>Pay Type</p>
+          <div className="flex items-center">
+            <CiCreditCard1 className="mr-2"/>
+            <p className="mb-0">Pay Type</p>
           </div>
-          <div>
-            <FaDollarSign className="ml-2"/>
-            <p>Price</p>
+          <div className="flex items-center">
+            <FaDollarSign className="mr-2"/>
+            <p className="mb-0">Price</p>
             </div>
         </div>
       </>

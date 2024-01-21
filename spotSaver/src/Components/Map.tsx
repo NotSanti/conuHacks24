@@ -2,7 +2,7 @@
 import "mapbox-gl/dist/mapbox-gl.css";
 import DeckGL from "@deck.gl/react/typed";
 import Button from "./Button.tsx"
-// import Popup from "./Popup.tsx"
+import Popup from "./Popup.tsx"
 import { Map as Mapper } from "react-map-gl";
 import { HeatmapLayer } from "@deck.gl/aggregation-layers";
 import * as parkingDataJson from '../data/parkingData.json';
@@ -39,6 +39,7 @@ function Map() {
   const [selectedMarker, setSelectedMarker] = useState(null);
 
   console.log('selectedMarker', selectedMarker);
+  const [isPopupVisible, setPopupVisible] = useState(false);
 
   const iconLayer = new IconLayer({
     id: 'icon-layer',
@@ -96,9 +97,11 @@ function Map() {
         <Button 
         hoverClassName="bg-[#f46666]"
         className="fixed bottom-16 right-5 bg-[#ff3131]"
-        imageSrc={false}>
+        imageSrc={false}
+        onClick={() => setPopupVisible(true)}>
           Reserve Spot
         </Button>
+        {isPopupVisible && <Popup onClose={() => setPopupVisible(false)} />}
       </DeckGL>
     </div>
   );
