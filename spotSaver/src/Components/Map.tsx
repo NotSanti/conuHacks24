@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import "mapbox-gl/dist/mapbox-gl.css";
 import DeckGL from "@deck.gl/react/typed";
 import Button from "./Button.tsx"
