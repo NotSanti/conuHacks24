@@ -39,7 +39,7 @@ class Button extends Component<ButtonProps, ButtonState> {
     const { children, className = '', hoverClassName = '', imageSrc } = this.props;
     const { isHovered } = this.state;
 
-    const buttonImgSrc = imageSrc ? '/custom_image.png' : (isHovered ? '/search_hover.png' : '/search_no_bg_white.png');
+    const buttonImgSrc = imageSrc ? (isHovered ? '/search_no_bg.png' : '/search_no_bg_white.png') : '';
 
     return (
       <button

@@ -31,7 +31,10 @@ function Map() {
         imageSrc={true}>
           Find a spot
         </Button>
-        <Button className="fixed bottom-16 right-5">Reserve Spot</Button>
+        <Button 
+        hoverClassName="bg-[#fe6c6c]"
+        className="fixed bottom-16 right-5"
+        imageSrc={false}>Reserve Spot</Button>
       </DeckGL>
     </div>
   );
