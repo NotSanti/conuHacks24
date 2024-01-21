@@ -56,7 +56,7 @@ function Map() {
     sizeScale: 5,
     getPosition: (d: { coordinates: number; }) => d.coordinates,
     getSize: () => 5,
-    getColor: (d: { exits: number; }) => [255, 49, 49],
+    getColor: () => [255, 49, 49],
     updateTriggers: {
       getFillColor: [selectedMarker]
     },
@@ -75,7 +75,7 @@ function Map() {
       initialViewState={INITIAL_VIEW_STATE}
       controller={true}
       layers={[heatLayer, iconLayer]}
-      onClick={(info: any, event: any) => {
+      onClick={(info: any) => {
         if(info.layer) setSelectedMarker(info.object);
         // console.log('Clicked:', info, event)
       }
