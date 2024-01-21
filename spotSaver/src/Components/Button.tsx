@@ -44,7 +44,7 @@ class Button extends Component<ButtonProps, ButtonState> {
 
     return (
       <button
-        className={`custom-button ${isHovered ? hoverClassName : ''} bg-[#ff3131] text-white font-bold py-2 px-4 rounded ${className}`}
+        className={`custom-button ${isHovered ? hoverClassName : ''} font-bold py-2 px-4 rounded ${className}`}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}>
         {imageSrc ? (

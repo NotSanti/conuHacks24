@@ -4,5 +4,5 @@
 }
 
 .parent-container:hover .icon {
-  content: url('/search_hover.png');
+  content: url('/search_hover.png'); 
 }
