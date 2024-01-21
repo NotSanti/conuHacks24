@@ -97,7 +97,6 @@ function Map() {
         imageSrc={true}>
           Find a spot
         </Button>
-        {/* <Popup/> */}
         <Button 
         hoverClassName="bg-[#f46666]"
         className="fixed bottom-16 right-5 bg-[#ff3131]"

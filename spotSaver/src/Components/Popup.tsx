@@ -12,18 +12,30 @@ class Popup extends Component {
       <>
         <div className="bg-white text-black">
           <h2>Parking Spot</h2>
-          <FaCarSide/>
-          <p>Parking Number</p>
-          <TbRoad />
-          <p>Parking Genre</p>
-          <LuParkingCircle/>
-          <p>Parking Type</p>
-          <SiOpenstreetmap/>
-          <p>Street Name</p>
-          <CiCreditCard1/>
-          <p>Pay Type</p>
-          <FaDollarSign className="ml-2"/>
-          <p>Price</p>
+          <div>
+            <FaCarSide/>
+            <p>Parking Number</p>
+          </div>
+          <div>
+            <TbRoad />
+            <p>Parking Genre</p>
+          </div>
+          <div>
+            <LuParkingCircle/>
+            <p>Parking Type</p>
+          </div>
+          <div>
+            <SiOpenstreetmap/>
+            <p>Street Name</p>
+          </div>
+          <div>
+            <CiCreditCard1/>
+            <p>Pay Type</p>
+          </div>
+          <div>
+            <FaDollarSign className="ml-2"/>
+            <p>Price</p>
+            </div>
         </div>
       </>
     );
