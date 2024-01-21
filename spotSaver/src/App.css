@@ -2,6 +2,18 @@
 #root {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+/* .mapboxgl-map {
+  font: 12px/20px Helvetica Neue,Arial,Helvetica,sans-serif;
+    overflow: hidden;
+    position: relative;
+    -webkit-tap-highlight-color: rgb(0 0 0/0);
+    z-index: 10 !important;
+}
+
+canvas {
+  z-index: 50;
+} */
+
 
 .parent-container:hover .icon {
   content: url('/search_hover.png'); 
