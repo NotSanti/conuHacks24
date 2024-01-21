@@ -60,10 +60,12 @@ function Map() {
     },
   });
 
+  console.log(import.meta.env.MAPBOX_KEY);
+
 
 
   const mapSettings = {
-    accessToken: process.env.MAPBOX_KEY,
+    accessToken: import.meta.env.VITE_MAPBOX_ACESS_TOKEN,
     style: "mapbox://styles/mapbox/standard",
   }
 
