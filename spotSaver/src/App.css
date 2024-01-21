@@ -27,8 +27,8 @@ canvas {
   border-top-color: #ff3131;
   animation: spin 1s linear infinite;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 40%;
   transform: translate(-50%, -50%);
 }
 

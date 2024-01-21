@@ -2,18 +2,18 @@ import { useState, useEffect } from "react";
 
 function Loading() {
   const [isLoading, setIsLoading] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
+  //const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-      setFadeOut(true);
-    }, 3000);
+      //setFadeOut(true);
+    }, 2000);
   }, []);
 
   return (
     <>
-    <div>
+    {/* <div>
       {isLoading ? (
         <img
         src="/spotsaver_new.png"
@@ -30,7 +30,7 @@ function Loading() {
       ) : (
         <p></p>
       )}
-    </div>
+    </div> */}
     <div className="overlay">
       {isLoading ? (
         <div className="full-circle-spinner"></div>
