@@ -10,8 +10,6 @@ import { useState } from "react";
 const parkingData = parkingDataJson.parkingData.data;
 const takenData = parkingDataJson.parkingData.takenSpots.data;
 
-console.log(takenData);
-
 const ICON_MAPPING = {
   marker: {x: 0, y: 0, width: 128, height: 128, mask: true}
 };
@@ -65,7 +63,7 @@ function Map() {
 
 
   const mapSettings = {
-    accessToken: import.meta.env.VITE_MAPBOX_ACESS_TOKEN,
+    accessToken: process.env.MAPBOX_KEY,
     style: "mapbox://styles/mapbox/standard",
   }
 
